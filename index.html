@@ -1,1212 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-    <link rel="manifest" href="favicons/manifest.json">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="google-site-verification" content="KRR9GS7bo9mLMkrPgVOSL6-9I7Mj8EieoTl-qjFvPWg" />
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110543961-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-110543961-1');
-    </script>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta name="description" content="Andika Rachman - Portfolio; AI, Deep Learning, Predictive Analytics, Ontology, Coding Problems, Tutorials">
-    <meta name="keywords" content="ai, machine learning, deep learning, big data, ontology, freelance, software, dev, developer, python, pytorch, programming, computers, neural networks, jupyter notebook, artificial intelligence, computer, it, internet, engineering, development, knowledge representation, analytics, predictive analytics, computer vision, natural language processing">
-    <meta name="author" content="Andika Rachman">
-
-    <title>Andika Rachman - Portfolio</title>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-    <script src="js/jquery.isotope.js" type="text/javascript"></script>
-    <script src="js/filter.js" type="text/javascript"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Ryan Fitzgerald</h1>
+            <h2>Software Engineer</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-		  		</button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://medium.com/@andikarachman">Medium</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/ar2017">Kaggle</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andikarachman/">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <h1 class="my-4">Andika Rachman
-            <small>Portfolio</small>
-        </h1>
-
-        <div class="projectFilter">
-            <center>
-                <a href="#" filter="*" class="current">All</a>
-                <a href="#" filter=".ai">Essential AI</a>
-                <a href="#" filter=".dl">Deep Learning</a>
-                <a href="#" filter=".cv">Computer Vision</a>
-                <a href="#" filter=".nl">NLP</a>
-                <a href="#" filter=".pa">Analytics</a>
-                <a href="#" filter=".on">Ontology</a>
-                <a href="#" filter=".cc">Coding Problems</a>
-                <a href="#" filter=".tu">Tutorials</a>
-            </center>
-        </div>
-
-        <br>
-
-        <div class="row">
-            <div class="projectContainer"></div>
-        </div>
-
-        <div class="projectContainer row">
-
-            <div class="ai col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/AI-Sudoku-Solver">
-                        <img class="card-img-top" src="images/icons/sudoku_icon_web.png" alt="Sudoku">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">AI Sudoku Solver</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Implementation of AI approaches to solve sudoku puzzles</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Naked Twins</li>
-                            <li>Constraint Propagation</li>
-                            <li>Depth First Search</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/AI-Sudoku-Solver">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
+                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
+                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                    </p>
                 </div>
             </div>
-
-            <div class="dl nl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/RNN-Quora-Question-Classification">
-                        <img class="card-img-top" src="images/icons/quora_icon_web.png" alt="Quora">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Question Classification</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">An RNN model for predicting whether a question is sincere or not</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>LSTM/GRU</li>
-                            <li>Attention Mechanism</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/RNN-Quora-Question-Classification">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl nl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/RNN-TV-Script-Generator">
-                        <img class="card-img-top" src="images/icons/TV_icon_web.png" alt="TV">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">TV Script Generator</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">An RNN model for generating TV script</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>LSTM</li>
-                            <li>Text Generation</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/RNN-TV-Script-Generator">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="dl cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/CNN-Digit-Recognizer">
-                        <img class="card-img-top" src="images/icons/digit_recognizer_icon_web.png" alt="Digit Recognizer">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Digit Recognizer</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A CNN model to identify digits from handwritten images</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>CNN</li>
-                            <li>Computer Vision</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/CNN-Digit-Recognizer">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl pa col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Deep-Learning-Predicting-Bike-Sharing-Ridership">
-                        <img class="card-img-top" src="images/icons/bike_icon_web.png" alt="Bike Ridership">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Bike Ridership Prediction</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A neural network model to predict daily bike rental ridership</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>Neural Network</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Deep-Learning-Predicting-Bike-Sharing-Ridership">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/CNN-Style-Transfer">
-                        <img class="card-img-top" src="images/icons/style_transfer_icon_web.png" alt="Style Transfer">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Style Transfer</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A style-transfer method by using CNN</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>CNN</li>
-                            <li>VGG19</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/CNN-Style-Transfer">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl nl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/RNN-Twitter-Sentiment-Analysis">
-                        <img class="card-img-top" src="images/icons/twitter_data_parser_icon_web.png" alt="Twitter">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Twitter Sentiment Analysis</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">An RNN model for performing Twitter sentiment analysis</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>Embedding/LSTM</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/RNN-Twitter-Sentiment-Analysis">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ai col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/AI-Classical-Planning">
-                        <img class="card-img-top" src="images/icons/achi_icon_web.png" alt="Classical Search">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">AI Classical Planning</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Implementation and analysis of symbolic logic and classical search</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Classical Planning</li>
-                            <li>Search Algorithm</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/AI-Classical-Planning">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/CNN-Dog-Breed-Classifier">
-                        <img class="card-img-top" src="images/icons/dog_icon_web.png" alt="Dog">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Dog Breed Classifier</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">CNN models to determine dog breed based on images</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>Transfer Learning</li>
-                            <li>ResNet</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/CNN-Dog-Breed-Classifier">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pa col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/ML-RBI-Assessment">
-                        <img class="card-img-top" src="images/icons/riskmatrix_icon_web.png" alt="Riskmatrix">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Machine Learning for RBI</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Machine learning models for risk-based inspection (RBI) assessment</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Scikit-learn</li>
-                            <li>Classification</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/ML-RBI-Assessment">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pa col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/ML-Kaggle-Titanic-from-Disaster">
-                        <img class="card-img-top" src="images/icons/ship_icon_web.png" alt="Style Transfer">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Titanic Survival Prediction</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Machine learning models for predicting the survival of Titanic passengers</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Scikit-learn</li>
-                            <li>Classification</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/ML-Kaggle-Titanic-from-Disaster">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pa col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/ML-Kaggle-House-Prices">
-                        <img class="card-img-top" src="images/icons/house_icon_web.png" alt="House">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">House Price Prediction</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Machine learning models for predicting house prices</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Scikit-learn</li>
-                            <li>Regression</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/ML-Kaggle-House-Prices">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tu col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/ML-Tutorial-Feature-Selection">
-                        <img class="card-img-top" src="images/icons/feat_selection_icon_web.png" alt="Brain">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Feature Selection Tutorial</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Tutorial for selecting features to develop machine learning models</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>NumPy</li>
-                            <li>Pandas</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/ML-Tutorial-Feature-Selection">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cc col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/hackerrank-sql">
-                        <img class="card-img-top" src="images/icons/HackerRank_icon_web.png" alt="HackerRank">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">SQL Practice Problems</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">HackerRank SQL Track solutions repository</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>HackerRank</li>
-                            <li>SQL</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/hackerrank-sql">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tu col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Pandas-Tutorial-Creating-Data-Structures">
-                        <img class="card-img-top" src="images/icons/python_icon_web.png" alt="Python">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Pandas Tutorial: Creating Data Structures</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text"></p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Python</li>
-                            <li>Pandas</li>
-                            <li>Data Structures</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Pandas-Tutorial-Creating-Data-Structures">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="on col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Damage-Mechanism-Identification-Ontology">
-                        <img class="card-img-top" src="images/icons/meta_intelligence_icon_web.png" alt="Meta Intelligence">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">DMIO</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Ontology for automating identification of damage mechanisms</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Protege</li>
-                            <li>OWL</li>
-                            <li>SWRL</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Damage-Mechanism-Identification-Ontology">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="on col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Inspection-Knowledge-Base-Ontology">
-                        <img class="card-img-top" src="images/icons/meta_intelligence_icon_web.png" alt="Meta Intelligence">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">IKBO</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Ontology for offshore and onshore process equipment inspection knowledge base</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Protege</li>
-                            <li>OWL</li>
-                            <li>SPARQL</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Inspection-Knowledge-Base-Ontology">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/GAN-Handwritten-Digits-Generation">
-                        <img class="card-img-top" src="images/icons/mnist-digits_icon_web.png" alt="MNIST">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Handwritten Digits Generation</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Handwritten digits generation using generative adversarial models</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>DCGAN/GAN</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/GAN-Handwritten-Digits-Generation">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ai col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Hidden-Markov-Chain-HMM-Tagger">
-                        <img class="card-img-top" src="images/icons/markov_chain_icon_web.png" alt="Markov Chain">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Part of Speech Tagging</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Hidden Markov model for part of speech tagging</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Python</li>
-                            <li>Markov Chain</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Hidden-Markov-Chain-HMM-Tagger">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/DCGAN-Face-Generation">
-                        <img class="card-img-top" src="images/icons/face_generator_icon_web.png" alt="Face Generation">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Face Generation</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A Deep Convolutional Generative Adversarial Neural Networks to generate new images of faces</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>DCGAN</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/DCGAN-Face-Generation">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Facial-Keypoint-Detection">
-                        <img class="card-img-top" src="images/icons/face_keypoint_icon_web.png" alt="Face Detection">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Facial Keypoint Detection</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A deep learning architectures to build a facial keypoint detection system</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>PyTorch</li>
-                            <li>CNN</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Facial-Keypoint-Detection">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Face-Recognition-App">
-                        <img class="card-img-top" src="images/icons/face_recog_icon_web.png" alt="Face Recognition">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Facial Recognition App</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A face recognition app using Python and OpenCV</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>HOG</li>
-                            <li>ResNet-34</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Face-Recognition-App">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/YOLO-Object-Detection">
-                        <img class="card-img-top" src="images/icons/obj_detection_icon_web.png" alt="Object Detection">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">YOLO Object Detection</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">YOLO object detection with OpenCV and Python</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>YOLO</li>
-                            <li>CNN</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/YOLO-Object-Detection">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl nl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Youtube-Spam-Comment-Classification">
-                        <img class="card-img-top" src="images/icons/youtube_icon_web.png" alt="Youtube">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Spam Comment Classification</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A classification model to automatically filter spams in YouTube comment</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Python</li>
-                            <li>Scikit-learn</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Youtube-Spam-Comment-Classification">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dl nl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/News-Title-Classification/tree/master">
-                        <img class="card-img-top" src="images/icons/newspaper_icon_web.png" alt="Newspaper">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">News Title Classification</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Machine learning model to classify news into categories based on their headline</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>LSTM/GRU</li>
-                            <li>Attention Mechanism</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/News-Title-Classification/tree/master">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Simple-Object-Tracking">
-                        <img class="card-img-top" src="images/icons/obj_track_icon_web.png" alt="Object Tracker">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Simple Object Tracking</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A simple object tracker with Python and OpenCV</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Python</li>
-                            <li>OpenCV</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Simple-Object-Tracking">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Pedestrian-Detection">
-                        <img class="card-img-top" src="images/icons/pedestrian_icon_web.png" alt="Pedestrian">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Pedestrian Detection</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Pedestrian detection system with HOG and SVM</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>HOG</li>
-                            <li>SVM</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Pedestrian-Detection">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Face-Tracking">
-                        <img class="card-img-top" src="images/icons/face_keypoint_icon_web.png" alt="Face Tracking">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Face Tracking System</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">A face tracking system with Python and OpenCV</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>SSD</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Face-Tracking">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Motion-Heatmap">
-                        <img class="card-img-top" src="images/icons/heatmap_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Motion Heatmap</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">See movement patterns over time using Python and OpenCV</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>Python</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Motion-Heatmap">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Camera-Calibration">
-                        <img class="card-img-top" src="images/icons/cam_calib_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Camera Calibration</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Camera calibration using OpenCV</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>Python</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Camera-Calibration">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Lidar-Obstacle-Detection">
-                        <img class="card-img-top" src="images/icons/lidar_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Lidar Obstacle Detection</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Use the data from lidar to track multiple cars on the road</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>Clustering</li>
-                            <li>C++</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Lidar-Obstacle-Detection">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Advanced-Lane-Lines">
-                        <img class="card-img-top" src="images/icons/lane_lines_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Advanced Lane Lines</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Use camera to identify lane lines</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>Python</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Advanced-Lane-Lines">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv dl col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/3D-Object-Tracking">
-                        <img class="card-img-top" src="images/icons/car_track_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">3D Object Tracking</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Calculate time-to-collison using lidar and camera</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>C++</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/3D-Object-Tracking">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cv col-lg-3 col-md-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="https://github.com/andikarachman/Unscented-Kalman-Filter">
-                        <img class="card-img-top" src="images/icons/deep_traffic_icon_web.png" alt="Color">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <center>
-                                <h4 class="card-title">Unscented Kalman Filter</h4>
-                            </center>
-                        </h4>
-                        <center>
-                            <p class="card-text">Estimate the state of multiple cars using lidar and radar</p>
-                        </center>
-                        <br>
-                        <ul style="list-style-type:square">
-                            <li>OpenCV</li>
-                            <li>C++</li>
-                        </ul>
-                        <br>
-
-                        <div class="link_button">
-                            <a href="https://github.com/andikarachman/Unscented-Kalman-Filter">
-                                <center>
-                                    <img class="img-fluid rounded mb-3 mb-md-0" src="images/icons/github.png" alt="GitHub" width="120" height="40">
-                                </center>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
         </div>
     </div>
+    <!-- End #about -->
 
-    <div class="footer-bottom">
-        <p class="m-0 text-center text-white"><a>© </a>
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            <a> template by </a> <a href="https://gsurma.github.io/">gsurma</a>
-        </p>
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+        </div>
     </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 YOUR NAME
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

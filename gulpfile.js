@@ -1,37 +1,39 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var pkg = require('./package.json');
+var plumber = require('gulp-plumber');
+const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const wait = require('gulp-wait');
+const babel = require('gulp-babel');;
+const rename = require('gulp-rename');
 
-// Copy vendor files from /node_modules into /vendor
-// NOTE: requires `npm install` before running!
-gulp.task('copy', function() {
-  gulp.src([
-      'node_modules/bootstrap/dist/**/*',
-      '!**/npm.js',
-      '!**/bootstrap-theme.*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('vendor/bootstrap'))
+gulp.task('scripts', function() {
+    return gulp.src('./js/scripts.js')
+        .pipe(plumber(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        })))
+        .pipe(babel({
+          presets: [['@babel/env', {modules:false}]]
+        }))
+        .pipe(uglify({
+            output: {
+                comments: '/^!/'
+            }
+        }))
+        .pipe(rename({extname: '.min.js'}))
+        .pipe(gulp.dest('./js'));
+});
 
-  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('vendor/jquery'))
-})
+gulp.task('styles', function () {
+    return gulp.src('./scss/styles.scss')
+        .pipe(wait(250))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulp.dest('./css'));
+});
 
-// Default task
-gulp.task('default', ['copy']);
-
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: ''
-    },
-  })
-})
-
-// Dev task with browserSync
-gulp.task('dev', ['browserSync'], function() {
-  // Reloads the browser whenever HTML or CSS files change
-  gulp.watch('css/*.css', browserSync.reload);
-  gulp.watch('*.html', browserSync.reload);
+gulp.task('watch', function() {
+    gulp.watch('./js/scripts.js', gulp.series('scripts'));
+    gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });
